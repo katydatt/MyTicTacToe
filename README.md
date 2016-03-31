@@ -28,4 +28,4 @@ And my CSS file of course made my html look like the way it does. I tried to mak
 
 Check it out here : [Tic Tac Toe](http://katydatt.github.io/MyTicTacToe/).
 
-![wireframe](/Users/Katy/Desktop/TicTacToe.png).
+![wireframe](https://github.com/katydatt/MyTicTacToe/blob/master/TicTacToe.png?raw=true).

@@ -3,148 +3,235 @@
 
 }
 
- body {
+body {
         width: 100%;
         height: 100%;
-        /*margin-left: 250px;*/
-        /*margin-bottom: 100px;*/
-        background-image: url('http://www.wallpapereast.com/static/images/android-3966x3966-abstract-lines-curves-wallpaper-3443.jpg');
-        background-size: cover;
-        font-family: 'Coming Soon', cursive;
-
     }
-    button {
-        font-family: 'Handlee', cursive;
-        width: 80px;
-        height: 60px;
-        font-size: 24px;
-        font-weight: bolder;
-        background-color: #5F9EA0;
-        border-radius: 5px;
-        float: right;
-        vertical-align: top;
-        margin-right: 500px;
-        position: relative;
 
-     }
+#board{
+    margin-top: 5px;
+    display: inline-block;
+   }
 
-        
+.round-button {
+    background-image: url('http://worldartsme.com/images/italian-background-clipart-1.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: top;
+    width:80px;
+    height:80px;
+    padding-top: 15px;
+    border-radius: 80%;
+    margin-left: 20px;
+}
+ 
+
 div#message {
     margin-top: 0;
     padding-top: 0;
-font-size: 20px;
-font-weight: bold;
-margin-left: 80px;
-
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 400px;
+    margin-bottom: 5px;
+    color: #2E8B57;
 }
 
 h1 {
-    padding-top: 0;
     margin-top: 0;
-    padding-left: 150px;
+    margin-left: 550px;
     font-size: 40px;
-    text-shadow: -1px 0 #FAFAD3, 0 1px #FAFAD3, 1px 0 #FAFAD3, 0 -1px #FAFAD3;
-    color: #DB7093;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: #B22222;
     font-weight: bolder;
-    /*text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;*/
+    margin-bottom: 5px;
    } 
 
-    .console {
-        display:table;
-        height: 345px;
-        width: 345px;
-        text-align: center;
-        border-radius: 10px;
-        font-family: 'Libre Baskerville', serif;
-        font-size: 30px;
-        color: #5F9EA0;
-        text-shadow: -2px 0 #FAFAD3, 0 2px #FAFAD3, 2px 0 #FAFAD3, 0 -2px #FAFAD3;
-        line-height: 115px;
-        font-weight: bolder;
-        border-collapse: collapse;
-        border-style: hidden;
-        margin-left: 100px;
+.console {
+    height: 501px;
+    width: 501px;
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 40px;
+    color: #B22222;
+    text-shadow: -1px 0 #FAFAD3, 0 1px #FAFAD3, 1px 0 #FAFAD3, 0 -1px #FAFAD3;
+    line-height: 167px;
+    font-weight: bolder;
+    margin-left: 400px;
+    display:table;
+    
    }
 
-   .box:hover{
-    background-color: #FAFAD3; 
+.box:hover{
+    background-image:url('http://www.shopcharm-it.com/media/catalog/product/cache/1/image/380x380/9df78eab33525d08d6e5fb8d27136e95/c/b/cbp23_i_heart_pizza_button_pin.jpg');
+    background-size: contain; 
     border-radius: 25px;
-
    }
-    .console  > div {
+
+.console  > div {
         display:table-row;
-        width:115px;
-        border: 8px solid #DB7093;
-    
+        width: 167px;
+        border: 3px solid gray; 
+        border-radius: 25px;
     }
-    .console  > div:first-child,
-    .console > div:last-child {
-        height: 115px;
-        border: 8px solid #DB7093;
+.console  > div:first-child,
+.console > div:last-child {
+        height: 167px;
+        border: 3px solid gray;
+        border-radius: 25px;
     }
-    .console  > div > div {
+.console  > div > div {
         display:table-cell;
-        border: 8px solid #DB7093;
+        border: 3px solid gray;
+        border-radius: 25px;
     }
-    .console > div > div:first-child,
-    .console > div > div:last-child {
-        width:115px;
-        border: 8px solid #DB7093;
+.console > div > div:first-child,
+.console > div > div:last-child {
+        width:167px;
+        border: 3px solid gray;
+        border-radius: 25px;
     }
 
 
-@media (max-width: 40em) {
 
+    @media (max-width: 64em) {
 
-    body{
-        background-size: cover;
-        margin: 0;
-       /* margin-left: 30px;
-        margin-right: 20px;*/
+        h1 {
+            margin-left: 200px;
+        }
+    
+    div#message {
+        margin-left: 180px;
     }
-    h1 {
-        padding-left: 10px;
-        font-size: 24px;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        .console {
+                height: 450px;
+                width: 450px;
+                font-size: 34px;
+                line-height: 150px;
+                font-weight: bolder;
+                margin-left: 150px;
+                display:table;
+           }
+        
+        .console  > div {
+                    display:table-row;
+                    width: 150px;
+                    
+                
+                }
+                .console  > div:first-child,
+                .console > div:last-child {
+                    height: 150px;
+                    
+                }
+                
+                .console > div > div:first-child,
+                .console > div > div:last-child {
+                    width: 150px;
+                    
+                }
+
+
 
     }
-div#message{
-font-size: 16px;
+
+
+@media (max-width: 50em) {
+
+
+    div#message {
+    margin-left: 20px;
+    }
+    .console {
+                height: 351px;
+                width: 351px;
+                font-size: 34px;
+                line-height: 117px;
+                font-weight: bolder;
+                margin-left: 50px;
+                display:table;
+           }
+        
+        .console  > div {
+                    display:table-row;
+                    width: 117px;
+                    
+                
+                }
+                .console  > div:first-child,
+                .console > div:last-child {
+                    height: 117px;
+                    
+                }
+                
+                .console > div > div:first-child,
+                .console > div > div:last-child {
+                    width: 117px;
+                    
+                }
 }
-    .console{
-    height: 240px;
-    width: 240px;
-    font-size: 16px;
-    line-height: 80px;
-    margin-right: 0;
-    }
 
-    .console  > div {
-        display:table-row;
-        width: 80px;
-        border: 8px solid #DB7093;
-    
-    }
-    .console  > div:first-child,
-    .console > div:last-child {
-        height: 80px;
-        border: 8px solid #DB7093;
-    }
-    .console  > div > div {
-        display:table-cell;
-        border: 8px solid #DB7093;
-    }
-    .console > div > div:first-child,
-    .console > div > div:last-child {
-        width: 80px;
-        border: 8px solid #DB7093;
-    }
-    button {
-        float:left;
-        margin-right: 0;
-        position: relative;
-        font-size:12px;
-        width: 50px;
-        height: 20px;
 
-    }
+
+
+            @media (max-width: 30em) {
+
+            body{
+                background-size: cover;
+                margin: 0;
+                /* margin-left: 30px;
+                margin-right: 20px;*/
+                }
+
+            h1 {
+                margin-left: 30px;
+                padding-left: 0;
+                font-size: 24px;
+                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+                }
+            div#message{
+            font-size: 16px;
+            margin-bottom: 3px;
+            }
+                .console{
+                height: 240px;
+                width: 240px;
+                font-size: 16px;
+                line-height: 80px;
+                margin-right: 0;
+                margin-left: 20px;
+                }
+
+                .console  > div {
+                    display:table-row;
+                    width: 80px;
+                    
+                
+                }
+                .console  > div:first-child,
+                .console > div:last-child {
+                    height: 80px;
+                    
+                }
+                .console  > div > div {
+                    display:table-cell;
+                    
+                }
+                .console > div > div:first-child,
+                .console > div > div:last-child {
+                    width: 80px;
+                    
+                }
+                button {
+                    font-size:10px;
+                    width: 60px;
+                    height: 30px;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+                #board {
+                    display:inline-block;
+                }
+
+

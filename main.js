@@ -1,4 +1,4 @@
-        
+
 var turn = "X";
 var  winner = null; // to change player's turnn at the begin
 
@@ -6,7 +6,7 @@ var  winner = null; // to change player's turnn at the begin
 var nextMove = function(box) {
     if(winner !== null){
       setMessage(winner +" already won the game");
-      
+
      }
     else if(box.innerHTML === ""){
       box.innerHTML = turn;
@@ -25,11 +25,11 @@ var startGame = function() {
   }
 
   setMessage(turn + " gets to start.");
-} 
+}
 
 var setMessage = function(msg) {
   document.getElementById("message").innerHTML = msg;
-}   
+}
 
 
 
@@ -66,9 +66,17 @@ function switchTurn() {
 
             result = true;
           }
- 
-          return result;
 
+          return result;
+        }
+        
+        function checkForTie(){
+          for(var i = 1; i < 10 ; i++) {
+            if(getBox(i) === ""){
+                console.log('not a tie');
+                return false;
+              }
+            } return true;
         }
 
         function checkRow(a, b, c, move) {
@@ -105,21 +113,8 @@ consoleDiv.addEventListener("click", function(event) {
   // event.target === the box to go in
   nextMove(event.target);
   var hasWon = checkWinner();
-  
+
 
 });
 
 startGame();
-
-
-
-
-
-  
-
-
-
-
-
-
-

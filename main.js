@@ -38,9 +38,9 @@ function switchTurn() {
           if(checkWinner(turn)) {
             setMessage("Congratulations, " + turn + " wins!");
             winner = turn; // whoever wins is gonna start the game
-          }
-
-          else if(turn === "X") {
+          } else if (checkForTie()) {
+              setMessage("It's a Tie! Try Again!");
+          } else if(turn === "X") {
             turn = "O";
             setMessage("It's " + turn + " turn.");
           }
@@ -69,7 +69,7 @@ function switchTurn() {
 
           return result;
         }
-        
+
         function checkForTie(){
           for(var i = 1; i < 10 ; i++) {
             if(getBox(i) === ""){

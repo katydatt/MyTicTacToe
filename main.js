@@ -1,5 +1,9 @@
 var turn = "X";
 var winner = null; // to change player's turnn at the begin
+var counterX = 0;
+var counterO = 0;
+var counterTie = 0;
+
 
 
     // window.addEventListener('DOMContentLoaded', function() {
@@ -31,6 +35,24 @@ function switchTurn() {
 
     if (checkWinner(turn)) {
         setMessage("Congratulations, " + turn + " wins!");
+        if (turn === "X") {
+          counterX += 1;
+          document.getElementById("countX").innerHTML = "X score = " + counterX;
+          console.log(counterX);
+        }
+        else if (turn === "O") {
+          counterO += 1;
+          document.getElementById("countO").innerHTML = "O score = " + counterO;
+
+          console.log(counterO);
+
+        }
+        else {
+          countTie += 1;
+          console.log(counterTie);
+
+        }
+
         winner = turn; // whoever wins is gonna start the game
     } else if (checkForTie()) {
         setMessage("It's a Tie! Try Again!");
@@ -86,6 +108,7 @@ function getBox(number) {
 function clearBox(number) {
     return document.getElementById("box" + number).innerHTML = "";
 }
+
 
 
 var btnReset = document.getElementById('reset');

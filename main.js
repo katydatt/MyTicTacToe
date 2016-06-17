@@ -1,11 +1,9 @@
+
 var turn = "X";
 var winner = null; // to change player's turnn at the begin
 var counterX = 0;
 var counterO = 0;
 var counterTie = 0;
-
-
-
     // window.addEventListener('DOMContentLoaded', function() {
 var startGame = function() {
     for (var i = 1; i <= 9; i++) { //clears all my boxes
@@ -19,22 +17,26 @@ var setMessage = function(msg) {
 }
 
 var nextMove = function(box) {
-  if (winner !== null) {
-    setMessage(winner + " already won the game");
+    if(winner !== null){
+      setMessage(winner +" already won the game");
 
-  } else if (box.innerHTML === "") {
-    box.innerHTML = turn;
-    switchTurn();
-  } else {
-    setMessage("Choose another box.");
+     }
+    else if(box.innerHTML === ""){
+      box.innerHTML = turn;
+      switchTurn();
+     }
 
+    else {
+      setMessage("Choose another box.");
+
+     }
   }
-}
+
 
 function switchTurn() {
 
     if (checkWinner(turn)) {
-        setMessage("Congratulations, " + turn + " wins!");
+      setMessage("Congratulations, " + turn + " wins!");
         if (turn === "X") {
           counterX += 1;
           document.getElementById("countX").innerHTML = "X score = " + counterX;
@@ -43,28 +45,24 @@ function switchTurn() {
         else if (turn === "O") {
           counterO += 1;
           document.getElementById("countO").innerHTML = "O score = " + counterO;
-
           console.log(counterO);
-
         }
         else {
-          countTie += 1;
-          console.log(counterTie);
-
+          counterTie += 1;
         }
 
-        winner = turn; // whoever wins is gonna start the game
-    } else if (checkForTie()) {
-        setMessage("It's a Tie! Try Again!");
-    } else if (turn === "X") {
-        turn = "O";
-        setMessage("It's " + turn + " turn.");
-    } else if (turn === "O") {
+      winner = turn; // whoever wins is gonna start the game
+      } else if (checkForTie()) {
+          setMessage("It's a Tie! Try Again!");
+      } else if(turn === "X") {
+          turn = "O";
+          setMessage("It's " + turn + " turn.");
+      }
+      else {
         turn = "X";
-        setMessage("Its " + turn + " turn.");
+        setMessage("It's " + turn + " turn.")
+      }
     }
-
-}
 
 function checkWinner(move) {
     var result = false;
@@ -123,9 +121,9 @@ btnReset.addEventListener('click', function() {
 var consoleDiv = document.getElementsByClassName("console")[0];
 
 consoleDiv.addEventListener("click", function(event) {
-    // event.target === the box to go in
-    nextMove(event.target);
-    var hasWon = checkWinner();
+  // event.target === the box to go in
+  nextMove(event.target);
+  var hasWon = checkWinner();
 
 
 });

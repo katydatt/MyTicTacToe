@@ -27,5 +27,8 @@ And at last but not least I asked my console to respond to user's click and make
 And my CSS file of course made my html look like the way it does. I tried to make it as a responsive web site, so for a max-width of 40em I set other values to my css properties .
 
 Check it out here : [Tic Tac Toe](http://katydatt.github.io/MyTicTacToe/).
+<<<<<<< HEAD
 
 ![wireframe](https://github.com/katydatt/MyTicTacToe/blob/gh-pages/Tic.png?raw=true"")
+=======
+>>>>>>> master
